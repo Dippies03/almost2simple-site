@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thanks — Almost2Simple</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <div class="brand">
+        <div class="brand__name">Almost2Simple</div>
+        <div class="brand__tagline">Message received</div>
+      </div>
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="/">Back to site</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <h2>Thanks — I’ve got it ✅</h2>
+          <p class="muted">I’ll reply as soon as I can. If it’s urgent, WhatsApp me.</p>
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn btn--primary" href="/" >Back to homepage</a>
+            <a class="btn btn--ghost" href="#" id="waLink">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Optional: you can hardcode your WhatsApp for now
+    const wa = "https://wa.me/27663611265?text=" + encodeURIComponent("Hi! I just sent the contact form on Almost2Simple.");
+    document.getElementById("waLink").href = wa;
+    document.getElementById("waLink").target = "_blank";
+    document.getElementById("waLink").rel = "noopener";
+  </script>
+</body>
+</html>

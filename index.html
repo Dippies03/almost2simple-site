@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Almost2Simple</title>
+  <meta name="description" content="Easy-to-manage websites for Western Cape small businesses." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Almost2Simple" />
+  <meta property="og:description" content="Easy-to-manage websites for Western Cape small businesses." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <div class="brand">
+        <div class="brand__name" id="businessName">Almost2Simple</div>
+        <div class="brand__tagline" id="tagline">Easy-to-manage websites for Western Cape small businesses</div>
+      </div>
+
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="#how">How it works</a>
+        <a class="btn btn--primary" id="whatsappBtn" href="#" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <h1 id="h1">Easy-to-manage websites for Western Cape small businesses</h1>
+        <p class="lead">
+          Update prices, opening hours, FAQs, and specials in a Google Sheet — your website updates automatically.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#pricing">See pricing</a>
+          <a class="btn btn--ghost" href="#demo">See the live demo</a>
+        </div>
+
+        <div class="hero__proof">
+          <div class="pill">Fast</div>
+          <div class="pill">Affordable</div>
+          <div class="pill">No logins</div>
+          <div class="pill">SEO-friendly</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="container">
+        <h2>How it works</h2>
+        <div class="grid3">
+          <div class="card">
+            <h3>1) We build your site</h3>
+            <p>Clean, fast, mobile-first website — designed for small businesses across the Western Cape.</p>
+          </div>
+          <div class="card">
+            <h3>2) You update a Google Sheet</h3>
+            <p>Edit hours, prices, specials, FAQs, services — without logging into WordPress or dealing with plugins.</p>
+          </div>
+          <div class="card">
+            <h3>3) Your website updates automatically</h3>
+            <p>Your site pulls the latest info from the sheet, so it stays accurate and up to date.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="demo">
+      <div class="container">
+        <div class="section__header">
+          <h2>Live demo (powered by Google Sheets)</h2>
+          <p class="muted">This section updates when you edit the sheet — no redeploy needed.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Services & pricing</h3>
+            <div id="services" class="stack"></div>
+          </div>
+
+          <div class="card">
+            <h3>FAQ</h3>
+            <div id="faq" class="stack"></div>
+          </div>
+        </div>
+
+        <div class="card card--note">
+          <div class="note__title">Pro tip</div>
+          <div class="note__body">
+            Edit your Google Sheet now (services/faq) and refresh this page — you’ll see the change immediately.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <h2>Simple pricing</h2>
+        <p class="muted">Transparent packages for small business websites. Western Cape focus.</p>
+        <div class="grid3" id="pricingGrid">
+          <!-- populated from Services as cards -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="contact">
+      <div class="container">
+        <div class="grid2">
+          <div>
+            <h2>Get a site that stays updated</h2>
+            <p class="lead">
+              Tell me what you do, where you’re based, and what you want customers to do (call, WhatsApp, visit, book).
+            </p>
+            <div class="stack">
+              <div class="kpi"><span class="kpi__label">Location</span><span class="kpi__value" id="location">Stilbaai, Western Cape</span></div>
+              <div class="kpi"><span class="kpi__label">Email</span><span class="kpi__value" id="emailText">—</span></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <!-- Netlify form works after deploy -->
+            <form name="contact" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact" />
+              <label>
+                Name
+                <input name="name" required />
+              </label>
+              <label>
+                Business
+                <input name="business" />
+              </label>
+              <label>
+                Email or WhatsApp
+                <input name="contact" required />
+              </label>
+              <label>
+                What do you need?
+                <textarea name="message" rows="4" required></textarea>
+              </label>
+              <button class="btn btn--primary" type="submit">Send</button>
+              <p class="muted tiny">Form submissions are captured securely (no plugins).</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="muted tiny">© <span id="year"></span> <span id="businessNameFooter">Almost2Simple</span></div>
+        <div class="muted tiny">Built as a live demo using Google Sheets integration.</div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>

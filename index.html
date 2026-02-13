@@ -14,10 +14,22 @@
 
   <link rel="stylesheet" href="./style.css" />
 </head>
-<form name="contact" netlify netlify-honeypot="bot-field" hidden>
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+  <input type="hidden" name="form-name" value="contact" />
+  <p style="display:none">
+    <label>Don’t fill this out: <input name="bot-field" /></label>
+  </p>
+
   <input name="name" />
   <input name="business" />
   <input name="contact" />
+  <textarea name="message"></textarea>
+</form>
+<!-- Netlify form detection helper (do not remove) -->
+<form name="contact" netlify netlify-honeypot="bot-field" hidden action="/thanks.html">
+  <input type="text" name="name" />
+  <input type="text" name="business" />
+  <input type="text" name="contact" />
   <textarea name="message"></textarea>
 </form>
 
@@ -169,5 +181,6 @@
   <script src="./script.js"></script>
 </body>
 </html>
+
 
 

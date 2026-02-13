@@ -46,7 +46,7 @@ function waLink(whatsappNumber, prefill) {
 async function main() {
   $("year").textContent = new Date().getFullYear();
 
-  if (!SHEET_API_URL || SHEET_API_URL.includes("https://script.google.com/macros/s/AKfycbyybKXch_-ufU2mZ6KJES948WC7tkQYQkBuilmdA0SGhF5I4QhwVx2r1XJJisTtLzDV/exec")) {
+  if (!SHEET_API_URL || SHEET_API_URL.includes("ignore")) {
     alert("You need to paste your Apps Script Web App URL into script.js (SHEET_API_URL).");
     return;
   }
@@ -151,3 +151,4 @@ async function main() {
 }
 
 main();
+

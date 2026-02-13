@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://almost2simple.netlify.app/sitemap.xml

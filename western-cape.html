@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Simple Business Websites Western Cape | Almost2Simple</title>
+  <meta name="description" content="Easy-to-manage, simple business websites for Western Cape small businesses. Update prices, hours, FAQs and specials in Google Sheets." />
+
+  <meta property="og:title" content="Simple Business Websites Western Cape | Almost2Simple" />
+  <meta property="og:description" content="Easy-to-manage websites for Western Cape small businesses. Google Sheets updates. No logins. Low maintenance." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <div class="brand">
+        <div class="brand__name" id="businessName">Almost2Simple</div>
+        <div class="brand__tagline" id="tagline">Easy-to-manage websites for Western Cape small businesses</div>
+      </div>
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="/">Home</a>
+        <a class="btn btn--primary" id="whatsappBtn" href="#">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <h1>Simple Business Websites for the Western Cape</h1>
+        <p class="lead">
+          Affordable, low-maintenance websites that you can update yourself via Google Sheets — perfect for small businesses across the Western Cape.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="/#contact">Get started</a>
+          <a class="btn btn--ghost" href="/#demo">See the live demo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Easy-to-manage websites (without WordPress)</h2>
+        <div class="grid2">
+          <div class="card">
+            <h3>Update your site in Google Sheets</h3>
+            <p class="muted">
+              Change hours, prices, services, FAQs and specials in a simple spreadsheet. Your website updates automatically.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Fast, clean, SEO-friendly</h3>
+            <p class="muted">
+              Lightweight pages load quickly and index well. Perfect for “simple business websites” and service-area searches.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container">
+        <h2>Areas we serve</h2>
+        <p class="muted">Stilbaai and nearby towns, plus broader Western Cape coverage.</p>
+
+        <div class="grid3">
+          <div class="card"><h3>Garden Route</h3><p class="muted">Stilbaai, Riversdale, Albertinia, Mossel Bay, George</p></div>
+          <div class="card"><h3>Overberg</h3><p class="muted">Swellendam, Heidelberg, Barrydale</p></div>
+          <div class="card"><h3>Wider Western Cape</h3><p class="muted">Cape Town (select projects), Paarl, Stellenbosch (select projects)</p></div>
+        </div>
+
+        <div class="card card--note">
+          <div class="note__title">Local SEO note</div>
+          <div class="note__body">
+            If you have a physical location or service area, we structure your page to rank for “near me” and town-based searches.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <h2>Pricing</h2>
+        <p class="muted">Same packages — maintained in Google Sheets.</p>
+        <div class="grid3" id="pricingGrid"></div>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container">
+        <h2>Ready to launch?</h2>
+        <p class="lead">Message me on WhatsApp or use the form on the homepage.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn--primary" href="/#contact">Use the contact form</a>
+          <a class="btn btn--ghost" id="wa2" href="#">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="muted tiny">© <span id="year"></span> <span id="businessNameFooter">Almost2Simple</span></div>
+        <div class="muted tiny"><a class="muted" href="/">Back to home</a></div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
+  <script>
+    // Keep this page's WhatsApp button consistent with script.js updates
+    document.addEventListener("DOMContentLoaded", () => {
+      const waTop = document.getElementById("whatsappBtn");
+      const wa2 = document.getElementById("wa2");
+      if (waTop && waTop.href) wa2.href = waTop.href;
+      document.getElementById("year").textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
